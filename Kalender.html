@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0;" />
+  <link rel="stylesheet" media="screen" href="./Beispiel:SELFHTML-Beispiel-Grundlayout.css" />  
+  <style>
+ button {
+  display: block;
+  width: 12em;
+ 
+}   
+ 
+table {
+  width: 350px;
+}
+
+table, td, caption {
+    border: 1px solid black;
+    border-collapse: collapse;
+	padding: 0.4em;
+	text-align: center;
+}
+
+td:nth-of-type(6),td:nth-of-type(7) {
+  background: #ebf5d7;
+  color: #666;
+}
+
+caption, tr:first-of-type {
+  background: #666;
+  color: #c4ced3;
+  font-weight: bold;
+} 
+td.heute {
+  color:red; 
+  font-weight: bold;
+  background: #ffebe6;
+}
+
+</style>
+  <title>Monatskalender</title>
+</head>
+<body>
+  <h1>Monatskalender</h1>
+
+  <main>
+    <table id="kalender">
+	 <button id="prevMonthBtn"><</button>
+	 <button id="nextMonthBtn">></button>
+	
+
+    </table>
+
+  </main>
+<script	src="createCal.js">
+  </script>  
+  <form action="/action_page.php">
+Von: <input type="date" id= "from"  ><br>
+Bis: <input type="date"  id = "until" ><br>
+<input type="submit" id="submitBtn" value="Submit">
+</form>
+</body>
+</html>
