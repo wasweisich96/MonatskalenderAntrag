@@ -4,12 +4,20 @@
     var dm = d.getMonth() + 1;
     var dj = d.getYear() + 1900;
     var rowCounter=0;
-	var elem = document.getElementById('prevMonthBtn');
-	elem.addEventListener('click', prevMonth);	
-	var elem = document.getElementById('nextMonthBtn');
-	elem.addEventListener('click', nextMonth);	
+	var fromDate;
+	document.getElementById('prevMonthBtn').addEventListener('click', prevMonth);	
+	document.getElementById('nextMonthBtn').addEventListener('click', nextMonth);	
+	document.getElementById('SubmitBtn').addEventListener('click', submitFunction);
+	document.getElementById('from').addEventListener('click', fromFunc);
 //	createTable();
 	Kalender(dm, dj);
+	
+	
+	
+	function fromFunc () {
+		fromDate= document.getElementById('from').value;
+		
+	}
 	
 	function RemoveCal() {
 	var i = 0;
@@ -19,11 +27,11 @@
 	}
 	}
 	
-	/*function createTable() {
-	change and commit 2
+	function submitFunction() {
 	
+	alert(fromDate);
 	}
-	*/
+	
 	
 	function prevMonth () {
 	RemoveCal()
